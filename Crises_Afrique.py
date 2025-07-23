@@ -53,7 +53,7 @@ for col, nb in outliers_par_colonne.items():
 
 # Encodage des variables categorielles de mon dataset
 # One-hot encoding de la colonne 'country'
-df_encoded = pd.get_dummies(African_crises, columns=['country'], drop_first=True)
+df_encoded = pd.get_dummies(African_crises, columns=['country'], drop_first=False)
 
 # Encodage binaire de 'banking_crisis'
 df_encoded['banking_crisis'] = df_encoded['banking_crisis'].map({'no_crisis': 0, 'crisis': 1})
